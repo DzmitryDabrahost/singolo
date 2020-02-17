@@ -1,1 +1,1 @@
-https://DzmitryDabrahost/singolo/cv
+https://DzmitryDabrahost.github.io/singolo/cv
