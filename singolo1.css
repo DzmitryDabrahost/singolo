@@ -1,0 +1,146 @@
+@import url(/font.css);
+
+* {
+    font-family: "Lato";
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    background-color: #2d303a;
+    height: 89px;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-bottom: 6px solid #323746;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1020px;
+}
+
+.header__logo {
+   padding-left: 40px;
+}
+
+h1  {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 6.32px;
+}
+
+.header__logo-star {
+    color: #eb5055;
+}
+
+.header__navigation {
+    list-style: none;
+    display: flex;
+    padding-right: 40px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 6.32px;
+}
+
+.header__navigation-dot {
+    color: #494e62;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.header__navigation a:hover {
+    color: #f06c64;
+}
+
+.main__content {
+    background-color: #f06c64;
+    height: 600px;
+    max-width: 1020px;
+    position: relative;
+    border-bottom: 6px solid #ea676b;
+}
+
+.chevleft {
+    position: absolute;
+    left: 42px;
+    top: 50%;
+    margin-top: -14px;
+    cursor: pointer;
+}
+
+.vertical__phone {
+    position: absolute;
+    left: 112px;
+    top: 53px;
+}
+
+.horizontal__phone {
+    position: absolute;
+    top: 174px;
+    right: 111px;
+}
+
+.chevright {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    margin-top: -14px;
+}
+
+.main__services {
+    width: 1020px;
+    height: 496px;
+    background-color: #f2f2f2;
+    color: #767e9e;
+    border-bottom: 6px solid #ffffff;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 17.86px;
+    font-family: "Lato-Black";
+    padding-top: 67px;
+    padding-left: 40px;
+}
+
+.services_description {
+    padding: 33px 40px 51px 41px;
+}
+
+.section_3_colums {
+    display: flex;
+    padding: 0 41px 37px;
+}
+
+.section_colums {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.section_colums_image {
+    padding-right: 20px;
+}
+
+.second {
+    padding: 0 21px 0 20px;
+}
+
+h3 {
+    color: #666d89;
+    font-family: "Lato - Black", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 17.86px;
+    padding-bottom: 15px;
+}
+
+.text_content {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 21.56px;
+    text-align: justify;
+}
