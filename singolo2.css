@@ -1,0 +1,134 @@
+@import url(/font.css);
+
+* {
+    font-family: "Lato", sans-serif;
+    color: #767e9e;
+    margin: 0 auto;
+    max-width: 1020px;
+}
+
+h2 {
+    font-family: "Lato-Black";
+    color: #666d89;
+    font-size: 30px;
+    padding-bottom: 21px;
+}
+
+h3 {
+    font-family: "Lato-Black";
+    color: #666d89;
+    font-size: 18px;
+}
+
+.portfolio {
+    height: 870px;
+    background-color: #2d303a;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 6px solid #323746;
+}
+
+.section_title {
+    margin: 0;
+    padding-top: 61px;
+    padding-left: 40px;
+}
+
+.section_title p {
+    font-size: 18px;
+    font-weight: 300;
+    padding-bottom: 14px;
+}
+
+.portfolio_tags-list {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.portfolio_tags-list li {
+    margin: 0;
+    font-size: 12px;
+    border: 1px solid #666d89;
+    border-radius: 5px;
+    padding: 3px 6px;
+}
+
+.portfolio_tags-list li + li {
+    margin-left: 10px;
+}
+
+.portfolio_image {
+    display: flex;
+    padding: 20px 40px 67px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.portfolio_image-slide {
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 54px 40px;
+    border-bottom: 6px solid #ffffff;
+    background-color: #f2f2f2;
+}
+
+.about h2 {
+    padding-bottom: 17px;
+}
+
+.about__title {
+    padding-bottom: 45px;
+}
+
+.about__title p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1.5px;
+}
+
+.about__person {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+}
+
+.about__person-foto {
+    height: 300px;
+}
+
+.about__person-name {
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 9px;
+}
+
+.about__person-description {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.about__section-links {
+    margin: 0;
+}
+
+.about__section-list {
+    display: flex;
+    margin: 0;
+    list-style: none;
+    padding-top: 25px;
+    padding-left: 0;
+}
+
+.about__section-list li+li {
+    padding-left: 8px;
+}
+
