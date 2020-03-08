@@ -242,6 +242,13 @@ h3 {
     padding: 2px 7px 3px;
 }
 
+.portfolio_tags-list li:hover {
+    border: 1px solid white;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
 .portfolio_tags-list li + li {
     margin-left: 8px;
 }
@@ -251,6 +258,8 @@ h3 {
     padding: 20px 0 67px;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-height: 618px;
+    overflow: hidden;
 }
 
 .portfolio_image-slide {
@@ -289,6 +298,8 @@ h3 {
 .about__person-description {
     font-size: 12px;
     line-height: 20px;
+    max-height: 40px;
+    overflow: hidden;
 }
 
 .about__section-links {
