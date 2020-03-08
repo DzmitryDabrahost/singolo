@@ -1,5 +1,3 @@
-@import url(/font.css);
-
 * {
     margin: auto;
     max-width: 1020px;
@@ -19,7 +17,8 @@
 }
 
 .callback__title {
-    font-family: "Lato";
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
     padding-top: 67px;
     padding-bottom: 42px;
 }
@@ -29,7 +28,7 @@
     font-size: 30px;
     line-height: 18px;
     font-weight: 900;
-    font-family: "Lato-Black";
+    font-family: "Lato", sans-serif;
     letter-spacing: -0.1px;
 }
 
@@ -68,6 +67,7 @@
 .description__title {
     margin-bottom: 8px;
     font-weight: 900;
+    letter-spacing: -0.35px;
 }
 
 .description__content {
@@ -112,7 +112,6 @@
 .callback__form input,
 textarea {
     background-color: #d6564f;
-    /*border: 1px solid #ea676b;*/
     border: none;
     border-radius: 5px;
     color: #e87675;
