@@ -213,6 +213,8 @@ h3 {
     line-height: 21px;
     text-align: justify;
     padding-top: 9px;
+    max-height: 72px;
+    overflow: hidden;
 }
 
 .portfolio {
@@ -300,6 +302,7 @@ h3 {
     line-height: 20px;
     max-height: 40px;
     overflow: hidden;
+    text-align: justify;
 }
 
 .about__section-links {
