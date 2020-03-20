@@ -3,10 +3,17 @@
     margin: 0 auto;
     max-width: 1020px;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .wrapper {
     padding: 0 40px;
+}
+
+#section__header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
 }
 
 .header {
@@ -19,7 +26,7 @@
     justify-content: space-between;
 }
 
-.header a {
+.navigation__link {
     text-decoration: none;
     color: white;
 }
@@ -30,6 +37,10 @@
     align-items: center;
     width: 115px;
     margin: 0;
+}
+
+.header__logo a {
+    text-decoration: none;
 }
 
 h1 {
@@ -78,11 +89,22 @@ h3 {
     color: #f06c64;
 }
 
-.main__content {
+.navigation__active {
+    color: #f06c64;
+}
+
+.slide__content {
     background-color: #f06c64;
     height: 600px;
     position: relative;
     border-bottom: 6px solid #ea676b;
+}
+
+.slider__background {
+    background: #648BF0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 .chevleft {
@@ -161,6 +183,43 @@ h3 {
     cursor: pointer;
 }
 
+.phone__small-left {
+    position: absolute;
+    left: 252px;
+    top: 152px;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.phone__big-center {
+    position: absolute;
+    left: 383px;
+    top: 43px;
+    z-index: 2;
+}
+
+.phone__small-right {
+    position: absolute;
+    left: 612.16px;
+    top: 152px;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.slider__section {
+    animation-name: sladeshow;
+    animation-duration: 1.5s;
+}
+
+@keyframes sladeshow {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .main__services {
     height: 500px;
     background-color: #f2f2f2;
@@ -186,7 +245,8 @@ h3 {
     line-height: 30px;
     letter-spacing: 0.61px;
     color: #666d89;
-    text-overflow: ellipsis;
+    overflow: hidden;
+    max-height: 60px;
 }
 
 .section_3_colums {
@@ -251,22 +311,38 @@ h3 {
     transition: 0.3s;
 }
 
+.portfolio_tags-list-active {
+    border: 1px solid white !important;
+    color: white;
+}
+
 .portfolio_tags-list li + li {
     margin-left: 8px;
 }
 
 .portfolio_image {
     display: flex;
-    padding: 20px 0 67px;
+    padding-top: 20px;
     flex-wrap: wrap;
     justify-content: space-between;
     max-height: 618px;
     overflow: hidden;
 }
 
-.portfolio_image-slide {
+.portfolio_image img{
     margin: 0;
-    margin-bottom: 16px;
+    margin-bottom: 19px;
+    display: inline-block;
+}
+
+.image:hover {
+    cursor: pointer;
+}
+
+.image__border {
+    border: 5px solid #F06C64;
+    width: 215px;
+    height: 187px;
 }
 
 .about {
@@ -349,6 +425,8 @@ h3 {
     font-weight: 400;
     text-align: justify;
     letter-spacing: -0.25px;
+    max-height: 58px;
+    overflow: hidden;
 }
 
 .callback__form {
@@ -382,10 +460,12 @@ h3 {
     line-height: 22px;
     text-align: justify;
     letter-spacing: -0.5px;
+    max-height: 81px;
+    overflow: hidden;
 }
 
 .description__info {
-    margin-top: 23px;
+    margin-top: 30px;
     font-size: 12px;
 }
 
@@ -447,6 +527,32 @@ textarea::placeholder {
     letter-spacing: -0.15px;
 }
 
+.bordered {
+    border: 1px solid red !important;
+}
+
+.callback__form__modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: cadetblue;
+    padding: 2%;
+    z-index: 22;
+}
+
+.close {
+    display: none;
+}
+
+.open {
+    display: block;
+}
+
 .footer {
     background-color: #2d303a;
     height: 76px;
@@ -483,4 +589,8 @@ textarea::placeholder {
     .header__navigation {
         letter-spacing: 0.8px;
     }
+}
+
+.hidden {
+    opacity: 0;
 }
