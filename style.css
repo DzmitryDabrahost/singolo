@@ -35,7 +35,6 @@
     padding-left: 41px;
     display: flex;
     align-items: center;
-    width: 115px;
     margin: 0;
 }
 
@@ -542,7 +541,7 @@ textarea::placeholder {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30%;
+    width: 60%;
     max-width: 100%;
     max-height: 100%;
     background-color: cadetblue;
@@ -598,6 +597,48 @@ textarea::placeholder {
 
 .hidden {
     opacity: 0;
+}
+
+.hamburger {
+    position: relative;
+    width: 25px;
+    height: 20px;
+    display: none;
+}
+
+.hamburger__line {
+    position: absolute;
+    display: inline-block;
+    background: white;
+    border-radius: 5px;
+    height: 3px;
+    width: 100%;
+    top: calc(50% - 1.5px);
+    left: 0;
+}
+
+.hamburger::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    background: white;
+    border-radius: 5px;
+    height: 3px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.hamburger::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    background: white;
+    border-radius: 5px;
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
 }
 
 @media screen and (max-device-width: 768px) {
@@ -659,18 +700,20 @@ textarea::placeholder {
     }
 
     .phone__small-left {
-        left: 166px;
-        top: 91px;
+        left: 22%;
+        top: 20%;
+        width: 20%;
     }
 
     .phone__small-right {
-        left: 480px;
-        top: 91px;
+        left: 62.5%;
+        top: 20%;
+        width: 20%;
     }
 
     .phone__big-center {
         left: 40%;
-        top: 43px;
+        top: 10%;
         width: 25%;
     }
 
@@ -794,5 +837,203 @@ textarea::placeholder {
 
     .social__links {
         padding-right: 0;
+    }
+}
+
+@media screen and (max-device-width: 375px) {
+    .hamburger {
+        display: inline-block;
+    }
+    
+    .header {
+        height: 71px;
+        border: none;
+    }
+
+    h1 {
+        font-size: 19px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .header__logo {
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .header__logo a {
+        margin: 0;
+        padding-left: 103px;
+    }
+    
+    .hamburger {
+        display: inline-block;
+        margin: 0;
+    }
+
+    .slide__content {
+        height: 220px;
+    }
+
+    .chevleft {
+        left: 9px;
+    }
+    
+    .chevright {
+        right: 9px;
+    }
+
+    .mobile__vertical {
+        top: 44px;
+        left: 46px;
+        width: 69px;
+        height: 121px;
+    }
+
+    .mobile__horizontal {
+        top: 70px;
+        left: 177px;
+        width: 122px;
+        height: 70px;
+    }
+
+    .phone_shadow {
+        width: 89px;
+        height: 177px;
+        left: 41px;
+        top: 20px;
+    }
+
+    .phone_base {
+        width: 79px;
+        height: 168px;
+        left: 41px;
+        top: 20px;
+    }
+
+    .phone_shadow-horizontal {
+        top: 20px;
+        left: 200px;
+        width: 89px;
+    }
+
+    .phone_base-horizontal {
+        width: 79px;
+        top: 21px;
+        left: 200px;
+    }
+
+    .wrapper {
+        padding: 0 32px;
+    }
+
+    .main__services {
+        height: 1032px;
+    }
+
+    .section__header {
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
+
+    .section__description {
+        max-height: 210px;
+    }
+
+    .section_colums {
+        width: 100%;
+        margin: 0 0 27px;
+    }
+
+    .portfolio {
+        height: 845px;
+    }
+
+    .portfolio__header {
+        padding-top: 42px;
+        padding-bottom: 18px;
+    }
+
+    .portfolio_image {
+        max-height: 585px;
+        padding-top: 25px;
+    }
+
+    .portfolio_image div {
+        margin-bottom: 10px;
+        width: 47%;
+    }
+
+    .portfolio_image div:nth-child(2n) {
+        margin-left: 10px;
+    }
+
+    .portfolio_image-slide {
+        width: 45%;
+    }
+
+    .portfolio_image-slide img {
+        width: 151px;
+        height: 128px;
+    }
+
+    .portfolio_image div:nth-child(3n+2) {
+        margin: 0;
+    }
+
+    .about {
+        height: 1752px;
+    }
+
+    .about__person {
+        width: 100%;
+        padding-bottom: 31px;
+    }
+
+    .about__person-foto {
+        margin: 0;
+        width: 100%;
+    }
+
+    .about__person-name {
+        padding-top: 14px;
+    }
+
+    .section__person {
+        flex-wrap: wrap;
+    }
+
+    .about__header {
+        padding-top: 32px;
+    }
+
+    .section__callback {
+        height: 972px;
+    }
+
+    .callback__title {
+        padding-top: 64px;
+    }
+
+    .title__content {
+        max-height: 206px;
+    }
+
+    .callback__form {
+        flex-wrap: wrap;
+    }
+
+    .callback__form input, textarea {
+        width: 100%;
+    }
+
+    .callback__description {
+        padding: 30px 0;
+    }
+
+    .description__info {
+        margin-top: 15px;
     }
 }
