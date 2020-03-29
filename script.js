@@ -1,6 +1,8 @@
 const navigationLinks = document.getElementById('header__menu'),
     portfolioImageTag = document.getElementById('portfolio__tags'),
+    hamburgerNavigationLinks = document.querySelector('.hamburger__navigation'),
     scrollToTop = document.getElementsByClassName('scrollToTop')[0],
+    burgerMenu = document.querySelector('.hamburger'),
     imageBordered = document.getElementsByClassName('portfolio_image')[0],
     formButton = document.getElementsByClassName('form__submit')[0],
     modalButton = document.getElementsByClassName('modal__button')[0],
@@ -124,7 +126,7 @@ formButton.addEventListener('click', (event) => {
     }
 
     if(email.value === ''){
-        output = "Enter your correct e-mail (Required)";
+        alert("Enter your correct e-mail (Required)");
         emailUser.classList.add('bordered');
         return;
     }
@@ -148,4 +150,41 @@ modalButton.addEventListener('click', (event) => {
     document.getElementsByClassName('form__email')[0].value = '';
 });
 
+burgerMenu.addEventListener('click', () => {
+    burgerMenu.classList.toggle('hamburger__menu_active');
+    hamburgerMenuVisible();
+    scrollScrinHamburger(event);
+});
 
+function hamburgerMenuVisible() {
+    if(burgerMenu.classList.contains('hamburger__menu_active')) {
+        document.getElementsByClassName('hamburger__navigation')[0].classList.add('open');
+        document.getElementsByClassName('hamburger__navigation_layer')[0].classList.add('open')
+    } else {
+        document.getElementsByClassName('hamburger__navigation')[0].classList.remove('open');
+        document.getElementsByClassName('hamburger__navigation_layer')[0].classList.remove('open')
+    }
+}
+
+document.addEventListener('scroll', scrollScrinHamburger);
+
+function scrollScrinHamburger(event) {
+    const cursorPosition = window.scrollY;
+    document.querySelectorAll('body section').forEach((item) => {
+        if (item.offsetTop <= cursorPosition && (item.offsetTop + item.offsetHeight) > cursorPosition) {
+            document.querySelectorAll('.hamburger__navigation a').forEach((a) => {
+                a.classList.remove('navigation__active');
+                if (item.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('navigation__active');
+                }
+            })
+        }
+    });
+}
+
+hamburgerNavigationLinks.addEventListener('click', (event) => {
+    if(event.target.classList.contains('hamburger__navigation_link')){
+        hamburgerNavigationLinks.querySelectorAll('a').forEach(item => item.classList.remove('navigation__active'));
+        event.target.classList.add('navigation__active');   
+    }
+});
